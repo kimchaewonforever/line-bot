@@ -1,7 +1,7 @@
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, FollowEvent
 
 app = Flask(__name__)
 
@@ -29,6 +29,13 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=f"歡迎加入！點此連結：{GROUP_LINK}")
         )
+
+@handler.add(FollowEvent)
+def handle_follow(event):
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=f"歡迎加入海底小助手！點此連結加入我們的群組：{GROUP_LINK}")
+    )
 
 if __name__ == "__main__":
     app.run(port=5000)
