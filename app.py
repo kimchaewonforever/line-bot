@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 CHANNEL_SECRET       = "4df45e7fede08b0937a9bd16f8685d89"
 CHANNEL_ACCESS_TOKEN = "DMDZwNAGuXgc1Sy6RelP9f1ZsA9nFAV6p6uyF4YRw2R8Tq458nu50VEtYbAigL6Dtp+4ui91Xcdhd1iUBGbzrhYXF+y0Q1+PhjjOcL098XSSfaVnLU+0HJ0BpKJs3E8Cm8UYhc1xyeUkrFaNTlOM+QdB04t89/1O/w1cDnyilFU="
-ADMIN_PASSWORD       = "你自己設一個密碼"
+ADMIN_PASSWORD       = "Timlee100!"
 
 DATA_FILE = "members.json"
 
